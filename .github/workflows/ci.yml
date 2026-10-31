@@ -19,3 +19,14 @@ jobs:
 
       - name: Run automated tests
         run: python -m pytest -v
+
+     
+      - name: Upload project artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: studentapp-source
+          path: |
+            app.py
+            test_app.py
+            Jenkinsfile
+            .github/workflows/ci.yml
